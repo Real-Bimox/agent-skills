@@ -79,7 +79,7 @@ In an established codebase, the risk profile inverts: the danger isn't building 
 Goal: the agent understands the codebase before it modifies anything.
 
 1. **`context-engineering` first.** Write the project rules file describing the real conventions, the ones in the code, not the ones in the wiki. Include build/test commands, directory meaning, known landmines ("don't touch `legacy/billing`, it has no tests and three known workarounds").
-2. **`code-review-and-quality` on incoming changes.** Reviewing is zero-risk and immediately valuable: the five-axis review and severity labels (Nit/Optional/FYI) work on any PR regardless of the codebase's state.
+2. **`code-review-and-quality` on incoming changes.** Reviewing is zero-risk and immediately valuable: the five-axis review and its severity labels (which separate what blocks a merge, Critical and Required, from what doesn't) work on any PR regardless of the codebase's state.
 3. **`debugging-and-error-recovery` for the bugs you were fixing anyway.** The five-step triage (reproduce → localize → reduce → fix → guard) shines in unfamiliar code, and the "guard" step starts building the regression suite you don't have.
 4. **`doubt-driven-development` as a safety net.** Legacy code is exactly the "unfamiliar code, high cost of being wrong" scenario this skill targets. Adversarial fresh-context review of the agent's claims about how the legacy system works catches confident hallucinations before they become commits.
 
