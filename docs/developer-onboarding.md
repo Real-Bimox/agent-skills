@@ -55,6 +55,9 @@ The repo eats its own cooking: verification is non-negotiable for skills, and it
 # Tier 1, structural: frontmatter, naming, required sections
 node scripts/validate-skills.js
 
+# Standalone-package reference materialization regression tests
+node --test scripts/materialize-skill-references-test.js
+
 # Command parity and description sync across the three command directories
 node scripts/validate-commands.js
 
